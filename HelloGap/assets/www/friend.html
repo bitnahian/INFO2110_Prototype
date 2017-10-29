@@ -33,7 +33,8 @@
 		<br>
 
 		<ul data-role="listview" data-filter="true">
-			<li><div style="font-size: 14px; color: gray;">Your Friends</div></li>
+            <li data-icon="plus"><a href="#new_detail5" data-rel="popup"> Add a friend </a> </li>
+            <li><div style="font-size: 14px; color: gray;">Your Friends</div></li>
 			<li><a href="#detail" data-rel="popup"> <img src="img/Harry Potter.jpg"> <h3>Harry Potter</h3></a> </li>
 			<li><a href="#new_detail4" data-rel="popup"> <img src="img/ash.png"> <h3>Ash Ketchum</h3></a> </li>
             <li style="display: none" class="item"><a href="#new_detail3" data-rel="popup"> <img src="img/Ron Weasley.jpg"> <h3>Ron Weasley</h3></a></li>
@@ -118,6 +119,26 @@
         <br>
 
         <a data-role="button" href="chat1.html" rel="external">Message</a>
+
+        <br>
+    </div>
+
+    <div data-role="popup" id="new_detail5">
+
+        <p style="font-size: 20px; font-weight: bold;">Email Address</p>
+        <input type="text">
+
+        <br>
+
+        <a data-role="button" href="#new_detail6" data-rel="popup">Send Request</a>
+
+        <br>
+    </div>
+
+    <div data-role="popup" id="new_detail6">
+
+        <p style="font-size: 20px; font-weight: bold;">Your request has been sent!</p>
+
 
         <br>
     </div>

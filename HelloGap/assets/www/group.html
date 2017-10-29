@@ -1,39 +1,81 @@
-<!DOCTYPE html> 
-<html> 
-	<head>
-  <meta charset="UTF-8">	
-	<title>UniChat</title> 
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>UniChat</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="jquery.mobile.structure-1.0.1.css" />
 	<link rel="apple-touch-icon" href="images/launch_icon_57.png" />
 	<link rel="apple-touch-icon" sizes="72x72" href="images/launch_icon_72.png" />
 	<link rel="apple-touch-icon" sizes="114x114" href="images/launch_icon_114.png" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
-    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
-</head> 
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
+</head>
 
-<body> 
-<div data-role="page" id="home" data-theme="c">
+<body>
 
-	<div data-role="content">
+<div data-role="content">
 
-		<img src="img/logo.png">
+	<img src="img/logo.png">
 
-	</div>
+	<br>
+	<br>
+	<ul data-role="listview" data-filter="true">
+		<li data-icon="plus"><a href="#new_detail" data-rel="popup"> Create an event group </a> </li>
+		<li><a href="#new_detail2" data-rel="popup">Group Invites <span class="ui-li-count" style="color:red"> <red>1</red> </span></a></li>
+		<li>Your Groups</li>
+		<li><a href="chat3.html"  data-transition="slidedown" rel="external"> <img src="img/pikachu.gif"> <h3>Pikachu Dance Off</h3> <br>
+            <p>Pika Pika! </p>
+            <span class="ui-li-count" style="color:red"> <red>2</red> </span> </a> </li>
+            <br>
 
-	<div data-role="footer" data-position="fixed">		
-		<div data-role="navbar">
-			<ul>
-				<li><a href="home.html" rel="external" data-icon="home">Chats</a></li>
-				<li><a href="friend.html" rel="external" data-icon="plus">Friends</a></li>
-				<li><a href="group.html" class="ui-btn-active ui-state-persist" rel="external" data-icon="grid">Groups</a></li>
-				<li><a href="post.html" rel="external" data-icon="star">Posts</a></li>
-				<li><a href="profile.html" rel="external" data-icon="gear">Profile</a></li>
-			</ul>
-		</div><!-- /navbar -->
-	</div><!-- /footer -->
+        <li>Other Groups</li>
+		<li><a href="chat1.html"  data-transition="slidedown" rel="external"> <img src="img/ash.png"> <h3>Ash Ketchum</h3> <br> <p>Hey Pikachu! I choose you! </p> <span class="ui-li-count" style="color:red"> <red>1</red> </span> </a> </li>
+
+	</ul>
+	<br>
+</div>
+
+<div data-role="popup" id="new_detail">
+
+	<p style="font-size: 15px; font-weight: bold;">Event Name</p>
+	<input type="text" name="group">
+    <p style="font-size: 15px; font-weight: bold;">Event Date</p>
+	<input type="date" name="group">
+	<p style="font-size: 15px; font-weight: bold;">Add Friends</p>
+	<ul data-role="listview">
+		<li data-icon="plus"> <img src="img/ash.png"> <h3>Ash Ketchum</h3> </li>
+		<li data-icon="plus"> <img src="img/Harry Potter.jpg"> <h3>Harry Potter</h3> </li>
+	</ul>
+	<p style="font-size: 15px; font-weight: bold;">Send invitiation to email:</p>
+	<input type="text">
+	</p>
+</div>
+
+<div data-role="popup" id="new_detail2">
+	<ul data-role="listview">
+		<li> You have been invited to the following groups. </li>
+		<li data-icon="plus"><img src="img/pokecenter.jpg"> <h3>Pokemon Center Party</h3></li>
+        <li><h2>1st November, 2017</h2></li>
+		<li><div style="max-height: 10%"><button style="margin-left: auto;">Accept</button> <button style="margin-right: auto">Decline</button></div></li>
+
+
+	</ul>
+</div>
+
+<div data-role="footer" data-position="fixed">
+	<div data-role="navbar">
+		<ul>
+			<li><a href="home.html" data-icon="home">Chats</a></li>
+			<li><a href="friend.html" rel="external" data-icon="plus">Friends</a></li>
+			<li><a href="group.html" rel="external" class="ui-btn-active ui-state-persist" data-icon="grid">Groups</a></li>
+			<li><a href="post.html" rel="external" data-icon="star">Posts</a></li>
+			<li><a href="profile.html" rel="external" data-icon="gear">Profile</a></li>
+		</ul>
+	</div><!-- /navbar -->
+</div><!-- /footer -->
 
 </div><!-- /page -->
 </body>
