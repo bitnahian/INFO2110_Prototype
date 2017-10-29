@@ -18,6 +18,9 @@
                     $(".item").show();
                     $(".hide").hide();
                 });
+                $(".decline").click(function() {
+                    $(".hide").hide();
+                });
             });
         </script>
 </head> 
@@ -88,7 +91,7 @@
         <br>
 
         <a data-role="button" rel="external" class="accept">Accept</a>
-        <a data-role="button" rel="external">Decline</a>
+        <a data-role="button" rel="external" class="decline">Decline</a>
 
         <br>
     </div>
