@@ -12,6 +12,33 @@
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
     <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
+		<script>
+            $(document).ready(function() {
+            	$(".confirmation").click(function () {
+					var $name = $('.name').val();
+					var $unikey = $('.unikey').val();
+					var $bday = $('.birthday').val();
+					var $type = $('.type').val();
+
+					if($name != "")
+					{
+					    $('.oname').text($name);
+					}
+					if($unikey != "")
+					{
+					    $('.ounikey').text($unikey);
+                    }
+					if($bday != "")
+					{
+					    $('.obirthday').text($bday);
+					}
+					if($type != "")
+					{
+					    $('.otype').text($type);
+					}
+                });
+			});
+		</script>
 </head> 
 
 <body> 
@@ -21,12 +48,60 @@
 
 		<img src="img/logo.png">
 
+ 		<br>
+		<ul data-role="listview">
+			<img src="img/pikachu.png" style="display: block; margin: 0 auto; height: 30%; width: 30%;">
+			<br>
+			<li>
+				<strong>Name: </strong>
+				<span class="oname">Pikachu</span>
+			</li>
+			<li>
+				<strong>Unikey: </strong>
+				<span class="ounikey">pika1234</span>
+			</li>
+			<li>
+				<strong>Birthday: </strong>
+				<span class="obirthday">25th, April</span>
+			</li>
+			<li>
+				<strong>Type: </strong>
+				<span class="otype">Electric</span>
+			</li>
+			<!--<li class="list-group-item">
+				<strong>Speed</strong>
+				<span class="badge">{{pokemon.stats.speed}}</span>
+			</li>
+			<li class="list-group-item">
+				<strong>Total</strong>
+				<span class="badge">{{pokemon.stats.total}}</span>-->
+		</ul>
 		<br>
-
-
-		<a href="#" data-role="button" rel="external" style="color: red;"> Log Out </a>
+		<br>
+		<ul data-role="listview">
+			<li data-icon="plus"><a href="#new_detail" data-rel="popup"> Make Changes </a> </li>
+		</ul>
+		<br>
+		<a href="home.html" data-role="button" rel="external" style="color: red;"> Log Out </a>
 
 	</div>
+
+	<div data-role="popup" id="new_detail" style="width: 300px;">
+
+		<p style="font-size: 15px; font-weight: bold;">Upload Image</p>
+		<button>Upload Image</button>
+		<p style="font-size: 15px; font-weight: bold;">Name</p>
+		<input type="text" class="name">
+		<p style="font-size: 15px; font-weight: bold;">Unikey</p>
+		<input type="text" class="unikey">
+		<p style="font-size: 15px; font-weight: bold;">Birthday</p>
+		<input type="text" class="birthday">
+		<p style="font-size: 15px; font-weight: bold;">Type</p>
+		<input type="text" class="type">
+		<button class="confirmation">Confirm Changes</button>
+		</p>
+	</div>
+
 
 	<div data-role="footer" data-position="fixed">		
 		<div data-role="navbar">
